@@ -1,5 +1,9 @@
-node {
-    stage("Build") {
-        sh "docker build -t vincentdeborger-site:${version} ."
+pipeline {
+    stages {
+        stage("Build") {
+            steps {
+                sh "docker build -t vincentdeborger-site:${version} ."
+            }
+        }
     }
 }
