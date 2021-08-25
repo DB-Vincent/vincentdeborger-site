@@ -1,5 +1,4 @@
-FROM klakegg/hugo:edge-alpine
-COPY site /src
+FROM klakegg/hugo:0.87.0-onbuild AS hugo
 
-CMD ['server']
-EXPOSE 1313:1313
+FROM nginx
+COPY --from=hugo /target /usr/share/nginx/html
