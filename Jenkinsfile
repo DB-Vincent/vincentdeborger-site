@@ -1,13 +1,13 @@
-node {
-    stage ("Pull code") {
-        sh "git clone https://github.com/DB-Vincent/vincentdeborger-site.git ."
-    }
+pipeline {
+    agent none
 
-    stage("Build") {
-        sh "docker build -t vincentdeborger-site:0.0.1 ."
-    }
+    stages {
+        stage("Docker build") {
+            agent any
 
-    stage ("Clean up workspace") {
-        sh "rm -rf *"
+            steps {
+                sh 'docker build -t vincentdeborger:latest .'
+            }
+        }
     }
 }
