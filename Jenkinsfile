@@ -1,6 +1,6 @@
 node {
     stage ("Pull code") {
-        sh "git clone git@github.com:DB-Vincent/vincentdeborger-site.git ."
+        sh "git clone https://github.com/DB-Vincent/vincentdeborger-site.git ."
         sh "ls -al"
     }
     stage("Build") {
