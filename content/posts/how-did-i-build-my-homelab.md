@@ -1,15 +1,14 @@
 ---
 title: "How did I build my homelab?"
-date: 2021-08-26T14:17:20+02:00
+date: 2020-07-23T16:49:20+02:00
 draft: false
 ---
 
-Let's take a look at how I build my personal homelab, how I got to building my homelab and what gear I have running.
-<!--  more -->
-
-![](/images/how-did-i-build-my-homelab/DSC2899.jpg)
+![](/images/how-did-i-build-my-homelab/DSC_2899.jpg)
 
 As a 19-year-old Security, Systems & Services student, getting hands-on experience with servers while I'm not on campus helps me get some experience. Besides that, a homelab makes it possible to implement subjects seen in class in a lab environment. Having some servers at home was the ultimate start of this project. Even before I got my own set of servers, I was lucky enough to have access to server-grade equipment at home. My father - who is also active in IT - had started his own homelab and that is where I found my love for IT.
+
+<!--  more -->
 
 ----
 
@@ -33,11 +32,10 @@ Both servers are currently running the latest version of VMware vSphere (7.0), e
 
 We already have a whole network set up where all our devices are connected on, but to achieve true separation of the two homelabs I utilized the second public IP address we got from our ISP. Using some VLANs I managed to get the link coming from the RJ-45 jack on our ISP's modem to both of the Dell R620 servers. This makes it possible for me to virtualize a PfSense installation.
 
-| |
-:-------------------------:|:-------------------------:|:-------------------------:
-![](/images/how-did-i-build-my-homelab/DSC2894.jpg)  |  ![](/images/how-did-i-build-my-homelab/DSC2895.jpg) | ![](/images/how-did-i-build-my-homelab/DSC2897.jpg)
+![](/images/how-did-i-build-my-homelab/DSC_2895.jpg) 
+![](/images/how-did-i-build-my-homelab/DSC_2897.jpg)
 
-As you can see in the 3rd picture above, we're also running an Unifi Security Gateway 3, this handy router runs our house and handles it like a champ. Both our servers (from the shared homelab) as well as our clients' traffic to the outside is routed by this piece of kit. Combined with a Unifi AP-AC-LR it serves us a stable internet connection which is manageable from one control panel.
+As you can see in the 2nd picture above, we're also running an Unifi Security Gateway 3, this handy router runs our house and handles it like a champ. Both our servers (from the shared homelab) as well as our clients' traffic to the outside is routed by this piece of kit. Combined with a Unifi AP-AC-LR it serves us a stable internet connection which is manageable from one control panel.
 
 For all the VLANs and internal routing we're using an HPE V1910-16G switch. While allowing us to seperate our devices into different VLANs and giving the option to connect different VLANs to eachother in case I want the devices in them to communicate.
 
