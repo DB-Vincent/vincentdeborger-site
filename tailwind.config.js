@@ -1,5 +1,12 @@
 module.exports = {
-  purge: [],
+  purge: {
+    enabled: true,
+    content: [
+      './themes/vincentdeborger/layouts/*.html',
+      './themes/vincentdeborger/layouts/_default/*.html',
+      './themes/vincentdeborger/layouts/partials/*.html'
+    ]
+  },
   darkMode: 'media', // or 'media' or 'class'
   theme: {
     extend: {
@@ -7,14 +14,14 @@ module.exports = {
         return {
           dark: {
             css: {
-              color: theme("colors.gray.300"),
-              '[class~="lead"]': { color: theme("colors.gray.400") },
+              color: theme("colors.gray.400"),
+              '[class~="lead"]': { color: theme("colors.gray.500") },
               a: { color: theme("colors.gray.100") },
               strong: { color: theme("colors.gray.100") },
               "ul > li::before": { backgroundColor: theme("colors.gray.700") },
               hr: { borderColor: theme("colors.gray.800") },
               blockquote: {
-                color: theme("colors.gray.100"),
+                color: theme("colors.gray.300"),
                 borderLeftColor: theme("colors.gray.800"),
               },
               h1: { color: theme("colors.gray.100") },
