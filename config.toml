@@ -1,4 +1,4 @@
-baseURL = "http://localhost:1313/"
+baseURL = "http://jen-01.lab.local/"
 languageCode = "en-us"
 title = "Vincent De Borger"
 theme = "vincentdeborger"
