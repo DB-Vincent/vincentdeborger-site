@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Vincent De Borger</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link href="{{ .Site.BaseURL }}css/style.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/d57ead3aa2.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="dark:bg-black dark:text-white">
+        <div class="container mx-auto px-8 my-16 md:px-8">
+            <main class="grid grid-rows-1 grid-cols-1 md:grid-rows-1 md:grid-cols-4 md:gap-4">
+                <div class="sidebar md:col-span-1 min-w-full md:break-word">
+                    <h1 class="text-lg dark:text-white">Vincent De Borger</h1>
+                    <h2 class="text-gray-400">Business application engineer</h2>
+                
+                    <div class="w-24 flex mt-4 mb-8 text-gray-400">
+                        <a href="https://twitter.com/vincentdeborger" aria-label="Personal Twitter account" target="_blank" rel="noopener" class="flex-1"><i class="fab fa-twitter hover:text-black dark:hover:text-white"></i></a>
+                        <a href="https://www.linkedin.com/in/vincent-de-borger/" aria-label="Personal LinkedIn account" target="_blank" rel="noopener" class="flex-1"><i class="fab fa-linkedin hover:text-black dark:hover:text-white"></i></a>
+                        <a href="https://github.com/DB-Vincent" target="_blank" aria-label="Personal Github account" rel="noopener" class="flex-1"><i class="fab fa-github hover:text-black dark:hover:text-white"></i></a>
+                    </div>
+
+                    <a href="{{ .Site.BaseURL }}"><span class="text-gray-400">← Back</span></a>
+                </div>
+                
+                <div class="md:col-span-3">
+                    <div>
+                        <h1 class="text-2xl dark:text-white">{{ .Title }}</h1>
+                        <article class="prose prose-sm sm:prose lg:prose-lg xl:prose-xl">
+                            {{ .Content }}
+                        </article>
+                    </div>
+                
+                    <footer class="mt-32 md:mt-48">
+                        <span class="text-gray-300 dark:text-gray-500">Made in 2021 by myself using <a href="https://gohugo.io/" aria-label="Hugo" target="_blank" rel="noopener" class="text-gray-500 dark:text-gray-300">Hugo</a>, <a href="https://tailwindcss.com/" aria-label="Tailwind" target="_blank" rel="noopener" class="text-gray-500 dark:text-gray-300">Tailwind</a> and lots of <span class="text-gray-500 dark:text-gray-300 coffee-cursor">coffee</span>.</span>
+                    </footer>
+                </div>
+            </main>     
+        </div>
+    </body>
+</html>
