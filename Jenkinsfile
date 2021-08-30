@@ -18,7 +18,7 @@ pipeline {
                     fi
                 '''
 
-                sh "docker run -d -p 80:80 --name vincentdeborger-dev vincentdeborger:dev-${BUILD_NUMBER}"
+                sh "docker run -d -p 81:80 --name vincentdeborger-dev vincentdeborger:dev-${BUILD_NUMBER}"
             }
         }
     }
