@@ -3,10 +3,24 @@ pipeline {
 
     stages {
         stage("Docker build") {
-            agent any
-
             steps {
-                sh 'docker build -t vincentdeborger:latest .'
+                sh "docker build -t vincentdeborger:dev-${BUILD_NUMBER} ."
+                sh "docker build -t vincentdeborger:dev-latest ."
+            }
+        }
+
+        stage("Deploy development version") {
+            steps {
+                sh """
+                    result=$( docker inspect --format="{{.State.Running}}" vincentdeborger-dev )
+
+                    if [[ -n "$result" ]]; then
+                        docker stop vincentdeborger-dev
+                        docker rm vincentdeborger-dev
+                    fi
+                """
+
+                sh "docker run -d -p 80:80 --name vincentdeborger-dev vincentdeborger:dev-${BUILD_NUMBER}"
             }
         }
     }
