@@ -5,4 +5,4 @@ theme = "vincentdeborger"
 enableEmoji = true
 
 [permalinks]
-'/' = '/:slug/'
+  posts = "/:slug"
