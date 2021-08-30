@@ -12,9 +12,7 @@ pipeline {
         stage("Deploy development version") {
             steps {
                 sh """
-                    result=$( docker inspect --format="{{.State.Running}}" vincentdeborger-dev )
-
-                    if [[ -n "\$result" ]]; then
+                    if [[ -n "$( docker inspect --format="{{.State.Running}}" vincentdeborger-dev )" ]]; then
                         docker stop vincentdeborger-dev
                         docker rm vincentdeborger-dev
                     fi
