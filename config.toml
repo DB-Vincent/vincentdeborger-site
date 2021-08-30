@@ -3,3 +3,6 @@ languageCode = "en-us"
 title = "Vincent De Borger"
 theme = "vincentdeborger"
 enableEmoji = true
+
+[permalinks]
+'/' = '/:slug/'
