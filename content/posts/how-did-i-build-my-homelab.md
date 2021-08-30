@@ -8,7 +8,7 @@ draft: false
 
 As a 19-year-old Security, Systems & Services student, getting hands-on experience with servers while I'm not on campus helps me get some experience. Besides that, a homelab makes it possible to implement subjects seen in class in a lab environment. Having some servers at home was the ultimate start of this project. Even before I got my own set of servers, I was lucky enough to have access to server-grade equipment at home. My father - who is also active in IT - had started his own homelab and that is where I found my love for IT.
 
-<!--  more -->
+<!-- more -->
 
 ----
 
