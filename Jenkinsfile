@@ -9,7 +9,7 @@ pipeline {
             }
         }
 
-        stage("Deploy development version") {
+        stage("Deploy production version") {
             steps {
                 sh '''
                     if [[ -n "$( docker inspect --format="{{.State.Running}}" vincentdeborger )" ]]; then
