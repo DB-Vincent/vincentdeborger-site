@@ -6,9 +6,6 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image/png" href="{{ .Site.BaseURL }}images/favicon.png" />
-
-        <link href="{{ .Site.BaseURL }}css/style.css" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/d57ead3aa2.js" crossorigin="anonymous"></script>
     </head>
     <body class="dark:bg-black dark:text-white">
         <div class="container mx-auto px-8 my-16 md:px-8">
@@ -63,6 +60,8 @@
                 </div>
             </main>     
         </div>
+        <link href="{{ .Site.BaseURL }}css/style.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/d57ead3aa2.js" crossorigin="anonymous"></script>
         {{ if in (.Site.BaseURL | string) "vincentdeborger.be" }}
         <script async defer data-website-id="13232c7f-18c7-4d01-acc2-a33a9eb6013d" src="https://umami.vincentdeborger.be/umami.js"></script>
         {{ end }}        
