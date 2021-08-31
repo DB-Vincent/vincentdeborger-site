@@ -26,7 +26,10 @@
                 
                 <div class="md:col-span-3">
                     <div class="my-8 md:my-0">
-                        <p class="leading-loose dark:text-gray-400">I'm Vincent, a 20y/o Belgian IT Student working on various projects concerning virtualization and infrastructure management. Currently I'm studying Systems, Services and Security at Thomas More where I get to work with VMWare vSphere, Cisco IOS, AWS and much more. </br></br>Besides spending my time working with hypervisors I work with Terraform and Ansible to configure and deploy machines in AWS and ESXi environments. Aside from studying I'm often working on one of my projects, called 'Het Serverkot', in this project I'm working with enterprise-grade server equipment together with some of my colleague-students.</p>
+                        <p class="leading-loose prose dark:prose-dark">
+                            I'm Vincent, a 21y/o tech enthousiast from Belgium focused on delivering near perfect solutions for automating repetitive tasks. I enjoy elevating my team's and my own technical level by constantly learning and sharing new skills. In order to keep doing this, I'm the proud owner of a full homelab with enterprise hardware. This way I have the perfect playground to test technologies, experiment with tools I want to implement in my professional carreer without having to worry about breaking something.
+                            <br><br>
+                            During my bachelors degree I worked on a modular DevOps framework which allowed a DevOps team to deploy a customized environment using a single tool. This framework combined various aspects of my degree ranging from writing code to setting up infrastructure in the cloud. During this time I learned the usefullness of various automation and DevOps tools like <a href="https://www.terraform.io/">Terraform</a>, <a href="https://www.ansible.com/">Ansible</a> and <a href="https://www.jenkins.io/">Jenkins</a>.</p>
                     </div>
                 
                     <div class="mt-32 md:mt-48">
@@ -60,5 +63,8 @@
                 </div>
             </main>     
         </div>
+        {{ if in (.Site.BaseURL | string) "vincentdeborger.be" }}
+        <script async defer data-website-id="13232c7f-18c7-4d01-acc2-a33a9eb6013d" src="https://umami.vincentdeborger.be/umami.js"></script>
+        {{ end }}        
     </body>
 </html>
